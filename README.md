@@ -20,7 +20,11 @@ MT3_Google_Calc_Challenge/
 
 ```
 ## Installation
-1. Clone the repository:
+### Python Setup
+1. Install Pyenv from https://github.com/pyenv/pyenv
+2. Install Python3. I recommend installing Python v3.12.3 (latest stable version as of 9/18/2024).
+### Clone the project
+1. Clone the repository using HTTPS:
 ```
 git clone https://github.com/diegoherzap/MT3_Google_Calc_Challenge.git
 ```
