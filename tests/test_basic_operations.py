@@ -1,5 +1,4 @@
 import logging
-
 import pytest
 
 from tests.test_data import numeric_operations
@@ -18,6 +17,16 @@ def operation(request):
 @pytest.mark.basic_operations
 @pytest.mark.parametrize("operation", numeric_operations, indirect=True)
 def test_operations(operation, driver, google_cal_page):
+    """
+    The "parametrize" mark iterates lists of operations in the form of operand (x), operator, operand (y). This is
+    test data, and it is imported from ./test_data.py. This test method uses the operands and operator to feed the UI
+    interactions and obtaining the result. It will then take the result from the UI and compare it to the operations
+    performed locally. The test will pass or fail after comparing the expected vs obtained result.
+    :param operation: This specifies that an operation is being requested.
+    :param driver: The ChromeDriver object.
+    :param google_cal_page: The GoogleCalculatorPage object that contains button handling references.
+    :return: None
+    """
     x, operator, y = operation
     operation = [x, operator, y, "="]
     wait_until_element_visible_and_clickable(google_cal_page, "CE", driver)

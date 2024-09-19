@@ -9,6 +9,10 @@ logger = logging.getLogger(__name__)
 
 
 def wait_until_element_visible_and_clickable(google_calc_page, button_text, driver, timeout=10):
+    """
+    Waits for an element to become visible and clickable on the page before interacting with it.
+    Ensures that the element is fully loaded and interactable, preventing timing issues during tests.
+    """
     locator = google_calc_page.locators.get(button_text)
     try:
         # Wait until the element visible
@@ -21,6 +25,13 @@ def wait_until_element_visible_and_clickable(google_calc_page, button_text, driv
 
 
 def parse_number_or_operator_and_click(google_cal_page, number_or_operator):
+    """
+    Parses a given number or operator (as a string) and clicks the corresponding button on the Google Calculator UI.
+    Useful for translating test data inputs into calculator interactions.
+    :param google_cal_page: This is a fixture defined at conftest.py
+    :param number_or_operator:
+    :return: None
+    """
     # Convert number or operator to string
     number_or_operator_to_string = str(number_or_operator)
     # Convert string to iterable
@@ -56,5 +67,4 @@ def click_button(google_cal_page, button_text):
 
 # Get text from calculator screen
 def get_result(google_cal_page):
-    result = google_cal_page.driver.find_element(*google_cal_page.calculator_display).text
-    return result
+    return google_cal_page.driver.find_element(*google_cal_page.calculator_display).text

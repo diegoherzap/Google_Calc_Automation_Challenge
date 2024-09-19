@@ -5,6 +5,10 @@ from tests.config import BASE_URL
 from selenium.webdriver.chrome.service import Service
 from page_objects.google_calculator_objects import GoogleCalculatorPage
 
+
+# This file defines fixtures for setting up the Selenium WebDriver and Google Calculator page object.
+# This is used as a fixture to initialize the test environment.
+
 @pytest.fixture(scope="class")
 def driver():
     # Driver setup
