@@ -1,5 +1,5 @@
-# MT3_Google_Calc_Challenge
-This repository contains a solution for automating tests for Google's online calculator using Selenium. It was created as part of a technical exercise for the MT3 interview process.
+# Google_Calc_Challenge
+This repository contains a solution for automating tests for Google's online calculator using Selenium.
 
 ## Features
 Automated testing of basic arithmetic operations: addition, subtraction, multiplication, and division.
@@ -8,7 +8,7 @@ Generates HTML reports and logs for test results.
 
 ## Project Structure
 ```
-MT3_Google_Calc_Challenge/
+Google_Calc_Automation_Challenge/
 ├── page_objects/         # Contains the Page Object model for the calculator.
 ├── tests/                # Test cases for validating operations.
 ├── utils/                # Utility functions for browser interactions and logic.
@@ -26,11 +26,11 @@ MT3_Google_Calc_Challenge/
 ### Clone the project
 1. Clone the repository using HTTPS:
 ```
-git clone https://github.com/diegoherzap/MT3_Google_Calc_Challenge.git
+git clone https://github.com/diegoherzap/Google_Calc_Automation_Challenge.git
 ```
 2. Navigate to the project directory:
 ```
-cd MT3_Google_Calc_Challenge
+cd Google_Calc_Automation_Challenge
 ```
 3. Install dependencies:
 ```
